@@ -1,4 +1,3 @@
-
 # [[Capture]] 
 ```tasks 
 description does not include @work 
@@ -7,6 +6,17 @@ filter by function task.file.filename === "Capture.md"
 not done
 ```
 ---
+## In Progress 
+```tasks 
+description includes @work 
+description does not include @later
+filter by function task.file.filename !== "Logs.md"
+filter by function task.file.filename !== "Old.md"
+filter by function 'IN_PROGRESS'.includes(task.status.type)
+sort by due
+not done 
+```
+
 
 ## [[Work]]
 
@@ -144,4 +154,5 @@ dv.table(["프로젝트명", "진행률", "수정일"],
 
 
 ```
+
 
